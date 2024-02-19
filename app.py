@@ -2,6 +2,6 @@ from flask import Flask,resquest,render_template
 app=Flask(__name__)
 @app.route("/",methods=["GET","POST"])
 def index():
-  return(render_template("index.html")
+  return(render_template("index.html"))
          if__name__ == "__main__":
   app.run()
