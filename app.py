@@ -1,12 +1,11 @@
 from flask import Flask,request,render_template
 
-app=Flask(__name__)
+app = Flask(__name__)
 
 r = ""
 first_time = 1
 
 @app.route("/",methods=["GET","POST"])
-
 def index():
     return(render_template("index.html"))
 
@@ -19,7 +18,14 @@ def main():
     return(render_template("main.html",r=r))
 
 @app.route("/image_gpt",methods=["GET","POST"])
-def main():
+def image_gpt():
     return(render_template("image_gpt.html"))
+
+@app.route("/end",methods=["GET","POST"])
+def end():
+    global first_time
+    first_time = 1
+    return(render_template("end.html"))
+
 if __name__ == "__main__":
     app.run()
