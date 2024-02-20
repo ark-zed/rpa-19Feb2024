@@ -9,6 +9,6 @@ def main():
   return(render_template("main.html",r=r))
 @app.route("/imageGPT",methods=["GET","POST"])
 def main():
-  return(render_template("imageGPT.html",r=r))
+  return(render_template("imageGPT.html"))
 if __name__ == "__main__":
   app.run()
